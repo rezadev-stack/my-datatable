@@ -22,6 +22,12 @@ export interface DataTableColumn<TData extends Record<string, unknown>> {
    * Optional - if not provided, column won't display cell data
    */
   accessorKey?: keyof TData;
+  
+  /**
+   * Enable sorting for this column
+   * @default true
+   */
+  enableSorting?: boolean;
 }
 
 export interface DataTableProps<TData extends Record<string, unknown>> {
@@ -35,5 +41,11 @@ export interface DataTableProps<TData extends Record<string, unknown>> {
    * Data to display in the table
    * Must be an array of objects matching TData shape
    */
-  data: TData[];
+   data: TData[];
+  
+  /**
+   * Enable client-side sorting
+   * @default false
+   */
+  enableSorting?: boolean;
 }
