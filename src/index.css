@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: ag-grid inspired base styles */
+.datatable {
+  @apply border rounded-lg overflow-hidden;
+}
+.datatable th {
+  @apply bg-gray-50 px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+.datatable td {
+  @apply px-4 py-3 whitespace-nowrap text-sm text-gray-900;
+}
+.datatable tr:nth-child(even) {
+  @apply bg-gray-50;
+}
